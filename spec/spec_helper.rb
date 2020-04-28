@@ -14,6 +14,7 @@ end
 
 require "savon"
 require "rspec"
+require "byebug"
 
 # don't have HTTPI lazy-load HTTPClient, because then
 # it can't actually be refered to inside the specs.

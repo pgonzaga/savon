@@ -14,7 +14,7 @@ module Savon
     def self.create(operation_name, wsdl, globals)
       if wsdl.document?
         ensure_name_is_symbol! operation_name
-        ensure_exists! operation_name, wsdl
+        ensure_exists!(operation_name, wsdl) if globals[:verify_operation_exists]
       end
 
       new(operation_name, wsdl, globals)

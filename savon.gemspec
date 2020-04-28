@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
   s.add_dependency "nokogiri", ">= 1.8.1"
   s.add_dependency "mail",     "~> 2.5"
 
+  s.add_development_dependency "byebug", "~> 11.1"
   s.add_development_dependency "rack"
   s.add_development_dependency "puma",  "~> 3.0"
 

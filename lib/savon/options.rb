@@ -92,7 +92,8 @@ module Savon
         :no_message_tag              => false,
         :follow_redirects            => false,
         :unwrap                      => false,
-        :host                        => nil
+        :host                        => nil,
+        :verify_operation_exists     => true
       }
 
       options = defaults.merge(options)
@@ -114,6 +115,11 @@ module Savon
     # set different host for actions in WSDL
     def host(host)
       @options[:host] = host
+    end
+
+    # check if operation exists for actions in WSDL
+    def verify_operation_exists(verify_operation_exists)
+      @options[:verify_operation_exists] = verify_operation_exists
     end
 
     # SOAP endpoint.
